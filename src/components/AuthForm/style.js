@@ -5,12 +5,36 @@ const height = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({ 
 
-    demoBtn: {
-      height: height/19,
-      width : width/2,
-      borderRadius: width/2
+    formContainer: {
+      flex: 1,
     },
 
+    preForm: {
+      flex: 3.3
+    },
+
+    formSize: {
+      left: 20,
+      width : '85%',
+      flex : 2.1,
+     },
+
+     btnGroup: {
+      flex: 3,
+      flexDirection: 'row',
+      justifyContent: 'center'
+     
+    },
+
+    btnStructure: {
+      width: width/2.1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 30,
+      height: height/15
+    },
+
+   
     itemLabelContent: {
       color: 'white'
     },
@@ -19,21 +43,6 @@ const styles = StyleSheet.create({
       fontSize: 15, 
       color: 'white'
     },
-
-    formSize: {
-     left: 20,
-     width : '85%',
-     
-    },
-
-    formContainer: {
-   
-     },
-
-    btnGroup: {
-      top: 50,
-      backgroundColor: 'yellow'
-    }
 
   })
    

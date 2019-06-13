@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import { Label, Form, Item, Input, Text, Icon } from 'native-base';
+import { Label, Form, Item, Input, Text, Icon, Button } from 'native-base';
 import { withNavigation } from 'react-navigation';
-import { Button } from 'react-native-elements';
+// import { Button } from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
 import { styles } from '../AuthForm/style';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
+// import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class AuthForm extends Component{
   
@@ -27,6 +28,10 @@ class AuthForm extends Component{
     return (
           <Form style={styles.formContainer}>
 
+            <View style={styles.preForm}>
+              {/* Still not determined element */}
+            </View>
+
             <View style={styles.formSize}>
             <Item floatingLabel >
               <Label style={styles.itemLabelContent}>Username</Label>
@@ -39,39 +44,27 @@ class AuthForm extends Component{
             </Item>
             </View>
 
-            {/* <View style={styles.btnGroup}>
-               <Button
-                  buttonStyle={styles.demoBtn}
-                  ViewComponent={LinearGradient} // Don't forget this!
-                  buttons={'hello'}
-                  linearGradientProps={{
-                    colors: ['red', 'green'],
-                    start: { x: 0, y: 0.5 },
-                    end: { x: 1, y: 0.5 },
-                  }}
-                />
-               <Button
-                buttonStyle={styles.demoBtn}
-                ViewComponent={LinearGradient} // Don't forget this!
-                buttons={'hello'}
-                linearGradientProps={{
-                  colors: ['red', 'green'],
-                  start: { x: 0, y: 0.5 },
-                  end: { x: 1, y: 0.5 },
-                }}
-              />
-            </View> */}
-
-
+            <View style={styles.btnGroup}>
            
-
-            {/* <Button onPress={() => this.props.navigation.navigate('Dashboard')}>
-            <Text>Login </Text>
-            </Button>
-            <Button>
-            <Text>Register</Text>
-            </Button> */}
-          
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Dashboard')}>
+                <LinearGradient
+                colors={['#00FFFF', '#17C8FF', '#329BFF', '#4C64FF', '#6536FF', '#8000FF']}
+                start={{x: 0.0, y: 1.0}} end={{x: 1.0, y: 1.0}}
+                style={styles.btnStructure} > 
+                <Text style={{ color: '#ffffff'}}>Register</Text>
+                </LinearGradient>
+                </TouchableOpacity>
+           
+                <TouchableOpacity>
+                <LinearGradient
+                colors={['#00FFFF', '#17C8FF', '#329BFF', '#4C64FF', '#6536FF', '#8000FF']}
+                start={{x: 0.0, y: 1.0}} end={{x: 1.0, y: 1.0}}
+                style={styles.btnStructure} > 
+                <Text style={{ color: '#ffffff'}}>Login</Text>
+                </LinearGradient>
+                </TouchableOpacity>
+            
+            </View>
           </Form>
     );
   }

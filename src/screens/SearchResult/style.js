@@ -11,18 +11,19 @@ const styles = StyleSheet.create({
     },
 
     topSearch: {
-     top: height/25,
-    // backgroundColor: 'green',
-     flex: 0.5,
+      flexDirection: 'row',
+      flex: 0.5,
+      justifyContent: 'center',
+     
     },
 
     caseBtn: {
-      backgroundColor: '#058794',
-      width: 200
+      backgroundColor: '#00ac65',
+      width: 200,
+      top: height/22,
     },
 
     searchResultContainer: {
-    //  backgroundColor: 'red',
       flex: 4,
     },
 })

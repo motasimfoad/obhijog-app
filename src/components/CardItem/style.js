@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
       fontWeight: '600',
     },
 
-
     rightCardSection: {
       backgroundColor: '#515151',
       height: 100,

@@ -31,6 +31,15 @@ class SearchResult extends Component{
         <View style={styles.searchResultContainer}>
            <ScrollView>
             <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
+            
             
             <Modal
           isVisible={this.state.isModalVisible}

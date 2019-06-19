@@ -13,7 +13,8 @@ class AuthForm extends Component{
         super(props);
 
         this.state = {
-          hidden: true
+          hidden: true,
+          isLoggedIn: false,
         };
 
         this.toggleShow = this.toggleShow.bind(this);

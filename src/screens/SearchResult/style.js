@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 
     topSearch: {
      top: height/25,
-     backgroundColor: 'green',
+    // backgroundColor: 'green',
      flex: 0.5,
     },
 
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
 
     searchResultContainer: {
-      backgroundColor: 'red',
+    //  backgroundColor: 'red',
       flex: 4,
     },
 })

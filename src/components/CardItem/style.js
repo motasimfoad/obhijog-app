@@ -6,7 +6,7 @@ const height = Dimensions.get('window').height;
 const styles = StyleSheet.create({ 
 
     cardContainer: {
-      backgroundColor: 'yellow',
+      backgroundColor: '#2B2B2B',
       height: height/7,
       flexDirection: 'row'
 

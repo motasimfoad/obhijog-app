@@ -12,12 +12,13 @@ class CardItems extends Component{
            <Card >
               <CardItem style={styles.cardContainer}>
                 <View style={styles.leftCardSection}>
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
+                  <Text style={styles.leftCardSectionHeader}>Case No.</Text>
+                  <Text style={styles.leftCardSectionHeader2}>420</Text>
+                  <Text style={styles.leftCardSectionNote} >Fine </Text>
+                  <Text style={styles.leftCardSectionNote2} > 350 </Text>
                 </View>
                 <View style={styles.rightCardSection}>
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
+                  <Text style={styles.rightCardSectionHeader}>Case short desctiption/header</Text>
                 </View>
               </CardItem>
             </Card>

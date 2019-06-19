@@ -38,12 +38,12 @@ const styles = StyleSheet.create({
      },
 
     scrollableModalContent1: {
-     flex: 3,
-     backgroundColor: '#515151',
-     borderRadius: width/10,
-     marginRight: 10,
-     marginLeft: 10,
-     alignItems: 'center',
+      flex: 3,
+      backgroundColor: '#515151',
+      borderRadius: width/10,
+      marginRight: 10,
+      marginLeft: 10,
+      alignItems: 'center',
     },
 
     scrollableModalContent2: {
@@ -80,13 +80,13 @@ const styles = StyleSheet.create({
 
     leftCardSectionHeader: {
       color: '#ebaf3c',
-      fontSize: 17,
+      fontSize: 25,
       fontWeight: '300',
     },
 
     leftCardSectionNote: {
       color: '#e9662c',
-      fontSize: 17,
+      fontSize: 25,
       fontWeight: '300',
     },
 
@@ -103,13 +103,15 @@ const styles = StyleSheet.create({
     },
 
     left: {
-      backgroundColor: 'red',
-      marginRight: 20
+      // backgroundColor: 'red',
+      marginRight: 20,
+      alignItems: 'center',
     },
 
     right: {
-      backgroundColor: 'green',
-      marginLeft: 20
+      // backgroundColor: 'green',
+      marginLeft: 20,
+      alignItems: 'center',
     }
 })
    

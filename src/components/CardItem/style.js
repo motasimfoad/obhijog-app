@@ -23,21 +23,27 @@ const styles = StyleSheet.create({
     },
 
     leftCardSectionHeader: {
-      color: 'yellow',
-      fontSize: 18
+      color: '#ebaf3c',
+      fontSize: 17,
+      fontWeight: '300',
     },
 
     leftCardSectionNote: {
-      color: 'red'
+      color: '#e9662c',
+      fontSize: 17,
+      fontWeight: '300',
     },
 
     leftCardSectionHeader2: {
-      color: 'yellow',
-      fontSize: 25
+      color: '#ebaf3c',
+      fontSize: 25,
+      fontWeight: '600',
     },
 
     leftCardSectionNote2: {
-      color: 'red'
+      color: '#e9662c',
+      fontSize: 25,
+      fontWeight: '600',
     },
 
 

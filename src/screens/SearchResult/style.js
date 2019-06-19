@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     topSearch: {
       flexDirection: 'row',
       flex: 0.5,
-     justifyContent: 'center',
+      justifyContent: 'center',
     },
 
     caseBtn: {
@@ -27,26 +27,26 @@ const styles = StyleSheet.create({
     },
 
     scrollableModal: {
-      backgroundColor: 'red',
+      backgroundColor: '#2B2B2B',
       height: height/1.2
     },
 
     modalTopSearch: {
       flexDirection: 'row',
       flex: 0.5,
-      backgroundColor:'green',
       justifyContent: 'center',
-     
-    },
+     },
 
     scrollableModalContent1: {
      flex: 4,
-     backgroundColor: 'blue',
+     backgroundColor: '#515151',
+     borderRadius: width/10,
+     marginRight: 2,
     },
 
     scrollableModalContent2: {
-      flex: 1,
-      backgroundColor: 'yellow',
+      flex: 0.8,
+      backgroundColor: '#2B2B2B',
     },
 
     modalCaseBtn: {

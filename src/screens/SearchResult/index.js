@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { styles } from '../SearchResult/style';
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, TouchableHighlight } from 'react-native';
 import { Button, Text, Icon, Card, CardItem } from 'native-base';
 //import Icon from 'react-native-vector-icons/FontAwesome';
 import { withNavigation } from 'react-navigation';
@@ -30,17 +30,11 @@ class SearchResult extends Component{
         </View>
         <View style={styles.searchResultContainer}>
            <ScrollView>
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-            <CardItems onPress={() => this.props.navigation.navigate('CaseDetails')} />
-
+             <TouchableHighlight onPress={this.toggleModal}>
+             <CardItems />
+             </TouchableHighlight>
             
+           
             <Modal
                 isVisible={this.state.isModalVisible}
                 onSwipeComplete={() => this.setState({ isModalVisible: false })}

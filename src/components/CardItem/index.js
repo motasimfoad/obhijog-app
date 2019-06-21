@@ -13,12 +13,12 @@ class CardItems extends Component{
               <CardItem style={styles.cardContainer}>
                 <View style={styles.leftCardSection}>
                   <Text style={styles.leftCardSectionHeader}>Case No.</Text>
-                  <Text style={styles.leftCardSectionHeader2}>420</Text>
+                  <Text style={styles.leftCardSectionHeader2}>{this.props.caseNo}</Text>
                   <Text style={styles.leftCardSectionNote} >Fine </Text>
-                  <Text style={styles.leftCardSectionNote2} > 350 </Text>
+                  <Text style={styles.leftCardSectionNote2} > {this.props.fine} </Text>
                 </View>
                 <View style={styles.rightCardSection}>
-                  <Text style={styles.rightCardSectionHeader}>Case short desctiption/header</Text>
+                  <Text style={styles.rightCardSectionHeader}>{this.props.heading}</Text>
                 </View>
               </CardItem>
             </Card>

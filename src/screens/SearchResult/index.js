@@ -1,26 +1,57 @@
 import React, {Component} from 'react';
 import { styles } from '../SearchResult/style';
 import { View, ScrollView, TouchableHighlight } from 'react-native';
-import { Button, Text, Icon, Card, CardItem } from 'native-base';
-//import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button, Text, Icon } from 'native-base';
 import { withNavigation } from 'react-navigation';
 import CardItems from '../../components/CardItem/';
 import Modal from "react-native-modal";
-
+import { request } from 'graphql-request';
 
 class SearchResult extends Component{
 
   state = {
-    isModalVisible: false
+    isModalVisible: false,
+    case: []
   };
+
+  componentDidMount() {
+    this.fetchData();
+ }
 
   toggleModal = () => {
     this.setState({ isModalVisible: !this.state.isModalVisible });
   };
 
+  fetchData = () => {
+    const query = `{
+      allCases{
+        id
+        caseNo
+        trafficOffence
+        fine
+      }
+    }`
+  
+  request('https://api.graph.cool/simple/v1/cjuvnbmub0zij0176xcsvoni9', query).then(data =>
+  this.setState({case: data.allCases})
+  )
+  .catch((err) => {
+    console.log(err);
+  });
+  };
+
+  
+
 
   render() {
+
+    const caseNo = "111";
+    const fine = "200";
+    const heading = "L a askduf asudgf";
+
+
     return (
+
       <View style={styles.container}>
         <View style={styles.topSearch}>
               <Button style={styles.caseBtn} onPress={this.toggleModal} rounded>
@@ -30,9 +61,17 @@ class SearchResult extends Component{
         </View>
         <View style={styles.searchResultContainer}>
            <ScrollView>
-             <TouchableHighlight onPress={this.toggleModal}>
-             <CardItems />
+
+             
+           {this.state.case.map(p => <TouchableHighlight key={p.id} onPress={this.toggleModal} >
+              <CardItems caseNo={p.caseNo} fine={p.fine} heading={p.trafficOffence}/>
              </TouchableHighlight>
+           )}
+
+             
+            
+             
+            
             
            
             <Modal
@@ -74,11 +113,8 @@ class SearchResult extends Component{
                   <Text style={styles.leftCardSectionNote} >Fine </Text>
                   <Text style={styles.leftCardSectionNote2} > 350 </Text>
                 </View>
-                 
               </View>
-             
-           
-          </View>
+            </View>
           </Modal>
            
           </ScrollView>

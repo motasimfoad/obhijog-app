@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { styles } from '../SearchResult/style';
-import { View, ScrollView, TouchableHighlight } from 'react-native';
+import { View, ScrollView, TouchableOpacity } from 'react-native';
 import { Button, Text, Icon } from 'native-base';
 import { withNavigation } from 'react-navigation';
 import CardItems from '../../components/CardItem/';
@@ -11,7 +11,8 @@ class SearchResult extends Component{
 
   state = {
     isModalVisible: false,
-    case: []
+    case: [],
+    caseDetails: {}
   };
 
   componentDidMount() {
@@ -40,15 +41,17 @@ class SearchResult extends Component{
   });
   };
 
-  
+  lalla = (p) => {
+    this.setState({ caseDetails: p });
+  };
 
+  
+  nested = (p) => {
+    this.toggleModal();
+    this.lalla(p);
+  };
 
   render() {
-
-    const caseNo = "111";
-    const fine = "200";
-    const heading = "L a askduf asudgf";
-
 
     return (
 
@@ -63,18 +66,13 @@ class SearchResult extends Component{
            <ScrollView>
 
              
-           {this.state.case.map(p => <TouchableHighlight key={p.id} onPress={this.toggleModal} >
-              <CardItems caseNo={p.caseNo} fine={p.fine} heading={p.trafficOffence}/>
-             </TouchableHighlight>
+           {this.state.case.map(p => <TouchableOpacity key={p.id} onPress = {()=> this.nested(p)} >
+              <CardItems caseNo={p.caseNo} fine={p.fine} heading={p.trafficOffence} />
+           </TouchableOpacity>
            )}
 
              
-            
-             
-            
-            
-           
-            <Modal
+              <Modal
                 isVisible={this.state.isModalVisible}
                 onSwipeComplete={() => this.setState({ isModalVisible: false })}
                 swipeDirection="down"
@@ -95,7 +93,7 @@ class SearchResult extends Component{
 
               <View style={styles.scrollableModalContent1}>
                 <View style={styles.scrollableModalTextHolder}>
-                <Text style={styles.scrollableModalText1}>Swipe down to close</Text>
+                <Text style={styles.scrollableModalText1}>{this.state.caseDetails.caseNo}</Text>
                 <Text style={styles.scrollableModalText2}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -115,7 +113,12 @@ class SearchResult extends Component{
                 </View>
               </View>
             </View>
-          </Modal>
+          </Modal> 
+             
+            
+            
+           
+            
            
           </ScrollView>
            </View>

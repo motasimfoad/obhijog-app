@@ -90,8 +90,6 @@ class SearchResult extends Component{
                       <Text>Search</Text>
                     </Button>
                   </View>
-
-
               <View style={styles.scrollableModalContent1}>
                 <View style={styles.scrollableModalTextHolder}>
                 <Text style={styles.scrollableModalText1}>{this.state.caseDetails.trafficOffence}</Text>
@@ -113,15 +111,9 @@ class SearchResult extends Component{
               </View>
             </View>
           </Modal> 
-             
-            
-            
-           
-            
-           
-          </ScrollView>
-           </View>
+        </ScrollView>
       </View>
+    </View>
     );
   }
 }

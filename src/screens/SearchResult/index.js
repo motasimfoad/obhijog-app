@@ -46,7 +46,6 @@ class SearchResult extends Component{
     this.setState({ caseDetails: p });
   };
 
-  
   nested = (p) => {
     this.toggleModal();
     this.lalla(p);
@@ -66,14 +65,12 @@ class SearchResult extends Component{
         <View style={styles.searchResultContainer}>
            <ScrollView>
 
-             
-           {this.state.case.map(p => <TouchableOpacity key={p.id} onPress = {()=> this.nested(p)} >
+            {this.state.case.map(p => <TouchableOpacity key={p.id} onPress = {()=> this.nested(p)} >
               <CardItems caseNo={p.caseNo} fine={p.fine} heading={p.trafficOffence} />
-           </TouchableOpacity>
+              </TouchableOpacity>
            )}
 
-             
-              <Modal
+             <Modal
                 isVisible={this.state.isModalVisible}
                 onSwipeComplete={() => this.setState({ isModalVisible: false })}
                 swipeDirection="down"

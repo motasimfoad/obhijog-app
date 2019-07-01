@@ -1,0 +1,4 @@
+#Mon Jul 01 23:38:25 BDT 2019
+base.0=/Users/charchill/obhijog-app/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

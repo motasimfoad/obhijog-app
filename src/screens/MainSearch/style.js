@@ -4,9 +4,17 @@ const styles = StyleSheet.create({
 
     container: {                         
       flex: 1,
+      backgroundColor: '#2B2B2B'
+    },
+    heading: {
+      flex: 1,
+      backgroundColor: 'red'
+    },
+    body: {
+      flex: 3,
+      backgroundColor: 'green',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#2B2B2B'
     },
     caseBtn: {
       backgroundColor: '#00AC65',
